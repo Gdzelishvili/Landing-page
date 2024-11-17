@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,11 +32,11 @@
             box-sizing: border-box;
         }
 
-        .logo {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 24px;
+        .contact_links{
+            width: 24px;
+            height: 24px;
         }
+
 
         nav {
             display: flex;
@@ -51,8 +52,10 @@
         }
 
         nav a:hover {
-            transform: scale(1.1); /* Scale on hover */
-            color: #f0b3b3; /* Slight color change on hover */
+            transform: scale(1.1);
+            /* Scale on hover */
+            color: #f0b3b3;
+            /* Slight color change on hover */
         }
 
         .burger {
@@ -69,13 +72,16 @@
         }
 
         section {
-            padding: 40px 20px; /* Reduced padding between sections */
-            min-height: 60vh; /* Adjusted min-height */
+            padding: 40px 20px;
+            /*  padding between sections */
+            min-height: 30vh;
+            /*  min-height */
         }
 
         footer {
             text-align: center;
-            padding: 15px; /* Reduced footer padding */
+            padding: 20px;
+            /*  footer padding */
             background-color: #1e1e1e;
         }
 
@@ -97,185 +103,227 @@
 
         /* Section Styling */
         h2 {
-            font-size: 1.8rem; /* Reduced font size */
-            margin-bottom: 10px; /* Reduced margin */
-            background-image: linear-gradient(to right, #ff7f50, #ff6347); /* Gradient background */
-            -webkit-background-clip: text; /* Clip the background to the text */
-            color: transparent; /* Make text transparent to show gradient */
+            font-size: 1.8rem;
+            /*  font size */
+            margin-bottom: 10px;
+            /*  margin */
+            background-image: linear-gradient(to right, #ff7f50, #ff6347);
+            /* Gradient background */
+            -webkit-background-clip: text;
+            /* Clip the background to the text */
+            color: transparent;
+            /* Make text transparent to show gradient */
             transition: all 0.3s ease;
         }
 
         h2:hover {
-            background-image: linear-gradient(to right, #ff6347, #ff7f50); /* Reverse gradient on hover */
+            background-image: linear-gradient(to right, #ff6347, #ff7f50);
+            /* Reverse gradient on hover */
         }
 
-        p, ul {
+        p,
+        ul {
             font-size: 1rem;
             line-height: 1.4;
-            margin-bottom: 10px; /* Reduced margin between paragraphs and list items */
+            margin-bottom: 10px;
+            /* Reduced margin between paragraphs and list items */
         }
 
         .cv-section {
             background-color: #222222;
+            border-radius: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 10px 20px rgba(0, 0, 0, 0.2);
             padding: 20px;
-            border-radius: 8px;
+            margin: 20px 0;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            transform: translateZ(0) rotateX(0deg);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .cv-section:hover {
+            transform: translateZ(20px) rotateX(-2deg);
+            /* Hover depth and slight rotation */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7), 0 15px 30px rgba(0, 0, 0, 0.3);
+            /* Enhanced shadow on hover */
         }
 
         .cv-section h3 {
             margin-top: 0;
         }
+
         /* Progress Bar Styles */
-.progress-bar-container {
-    margin: 20px 0;
-}
+        .progress-bar-container {
+            margin: 20px 0;
+        }
 
-.progress-bar-container h3 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-}
+        .progress-bar-container h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
 
-/* Linear Progress Bar */
-.linear-progress {
-    width: 100%;
-    height: 20px;
-    background-color: #C7C6C6;
-    border-radius: 10px;
-    overflow: hidden;
-}
+        /* Linear Progress Bar */
+        .linear-progress {
+            width: 100%;
+            height: 20px;
+            background-color: #C7C6C6;
+            border-radius: 10px;
+            overflow: hidden;
+        }
 
-.linear-progress .progress {
-    height: 100%;
-    background-color: #0BCEAF;
-    width: 85%; /* Example for 85% progress */
-    border-radius: 10px;
-}
+        .linear-progress .progress {
+            height: 100%;
+            background-color: #0BCEAF;
+            width: 85%;
+            /* Example for 85% progress */
+            border-radius: 10px;
+        }
 
-/* Circular Progress Bar */
-.circular-progress {
-    position: relative;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background: conic-gradient(#0BCEAF 0% 85%, #C7C6C6 85% 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
-}
+        /* Circular Progress Bar */
+        .circular-progress {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: conic-gradient(#0BCEAF 0% 85%, #C7C6C6 85% 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
 
-.circular-progress span {
-    font-size: 1.2rem;
-    color: #ffffff;
-}
+        .circular-progress span {
+            font-size: 1.2rem;
+            color: #ffffff;
+        }
+        .name{
+            font-size: 65px;
+            line-height: 1;
+            margin-top: 20px;
+        }
+        
     </style>
 </head>
+
 <body>
 
-<header>
-    <a href="https://geolab.edu.ge" class="logo">Logo</a>
-    <div class="burger" onclick="toggleNav()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <nav id="nav-links">
-        <a href="#contact">Contact</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-        <a href="https://github.com" target="_blank">GitHub</a>
-    </nav>
-</header>
+    <header>
+        <div>
+            <a href="https://geolab.edu.ge" target="_blank"><img class="contact_links" src="iamges/geolab logo/ჯეოლაბის თეთრი ლოგო.svg" alt=""></a>
+            <a href="https://www.linkedin.com/in/lasha-grdzelishvili-21b2ab123/"  target="_blank"><img class="contact_links"
+                    src="iamges/linkedin-svgrepo-com.svg" alt="linkedin logo"></a>
+            <a href="https://github.com/Gdzelishvili"  target="_blank"><img class="contact_links" src="iamges/github-color-svgrepo-com.svg"
+                    alt="github logo"></a>
 
-<main>
-    <section id="contact" class="cv-section">
-        <h2>Contact</h2>
-        <p><strong>Name:</strong> Lasha Grdzelishvili</p>
-        <p><strong>Age:</strong> 29</p>
-        <p><strong>Phone:</strong> +995 598 302 666</p>
-        <p><strong>Email:</strong> <a href="mailto:Lasha.grdzelishvili03@geolab.edu.ge" style="color: #ffffff;">Lasha.grdzelishvili03@geolab.edu.ge</a></p>
-    </section>
-
-    <section id="experience" class="cv-section">
-        <h2>Experience</h2>
-        <ul>
-            <li><strong>Nurse</strong> at Zhvania Clinic (2014 – 5 months)</li>
-            <li><strong>Insurance Agent</strong> at Imediel (2015 – 4 months)</li>
-            <li><strong>Sales Agent</strong> at Anex Advertising (2015 – 6 months)</li>
-            <li><strong>CAE English Language Certificate</strong> (2015)</li>
-            <li><strong>Financial Literacy Training</strong> for Youth in JA Georgia (2016)</li>
-            <li><strong>Junior Dr. of Radiology</strong> at Aversi Clinic (2018 – present)</li>
-            <li><strong>IT Specialist/Interface Designer</strong> in ADAM Project (2017 – 2020)</li>
-        </ul>
-    </section>
-
-    <section id="education" class="cv-section">
-        <h2>Education</h2>
-        <ul>
-            <li><strong>Interface Designing Courses</strong> at Geolab (2016, 6 months)</li>
-            <li><strong>Beginner Programming Courses</strong> at Geolab (2017, 3 months)</li>
-            <li><strong>MD in Clinical Radiology</strong> (2019-2022)</li>
-            <li><strong>Gita "Mobile Android Development"</strong> (2021-2022)</li>
-            <li><strong>Udemy - The Complete Web Developer Zero to Mastery</strong> (2022 – present)</li>
-        </ul>
-    </section>
-
-    <section id="skills" class="cv-section">
-        <h2>Skills</h2>
-        <p><strong>Programming Languages:</strong> CSS, HTML (Intermediate), JavaScript, Python, Java (Beginner)</p>
-        <p><strong>Languages:</strong> English (Advanced), Georgian (Native), Russian (Fluent), Spanish (A1)</p>
-        <p><strong>Digital Skills:</strong> Microsoft Office, PowerPoint, Adobe Illustrator, Video Editing (Vegas)</p>
-        <p><strong>Other Skills:</strong> Good understanding of OOP, Karel, design patterns, and algorithms. Social Platforms: Instagram, Google, Facebook Ads.</p>
-        <p><strong>Personal Skills:</strong> Hardworking, Outgoing, Responsible, Organized, Sociable, Creative, Active, Team-player.</p>
-        <p><strong>Driving License:</strong> B1</p>
-    </section>
-    <section id="skills" class="cv-section">
-        <h2>Skills</h2>
-    
-        <!-- Linear Progress Bar for HTML -->
-        <div class="progress-bar-container">
-            <h3>HTML</h3>
-            <div class="linear-progress">
-                <div class="progress"></div>
-            </div>
         </div>
-    
-        <!-- Circular Progress Bar for HTML -->
-        <div class="progress-bar-container">
-            <h3>HTML</h3>
-            <div class="circular-progress">
-                <span>85%</span>
-            </div>
+        <div class="burger" onclick="toggleNav()">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-    
-        <!-- Linear Progress Bar for JavaScript -->
-        <div class="progress-bar-container">
-            <h3>JavaScript</h3>
-            <div class="linear-progress">
-                <div class="progress" style="width: 60%;"></div> <!-- Example for 60% progress -->
-            </div>
-        </div>
-    
-        <!-- Circular Progress Bar for JavaScript -->
-        <div class="progress-bar-container">
-            <h3>JavaScript</h3>
-            <div class="circular-progress" style="background: conic-gradient(#0BCEAF 0% 60%, #C7C6C6 60% 100%);">
-                <span>60%</span>
-            </div>
-        </div>
-    </section>
-</main>
+        <nav id="nav-links">
+            <a href="#contact">Contact</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+        </nav>
+    </header>
 
-<footer>
-    <p>&copy; 2023 Lasha Grdzelishvili. All rights reserved.</p>
-</footer>
+    <main>
+        <section id="contact" class="cv-section">
+            <h2>Hellow I'm</h2>
+            <p class="name"><strong>Lasha Grdzelishvili</strong> </p>
+            <p class="work">Front-End Developer</p>
+            <p><strong>Age:</strong> 31</p>
+            <p><strong><img src="iamges/phone.svg" alt="" class="contact_links"> : </strong> +995 598 302 666</p>
+            <p><strong><img src="iamges/mail.png" class="contact_links" alt="">:</strong> <a href="mailto:Grdzelishvili.lasha@yahoo.com"
+                    style="color: #ffffff;">Grdzelishvili.lasha@yahoo.com</a></p>
+            <p><strong><img src="iamges/location.svg" class="contact_links" alt="">:</strong> Georgia, Tbilisi</p>
+        </section>
 
-<script>
-    function toggleNav() {
-        document.getElementById('nav-links').classList.toggle('active');
-    }
-</script>
+        <section id="experience" class="cv-section">
+            <h2>Experience</h2>
+            <ul>
+                <li><strong>Nurse</strong> at Zhvania Clinic (2014 – 5 months)</li>
+                <li><strong>Insurance Agent</strong> at Imediel (2015 – 4 months)</li>
+                <li><strong>Sales Agent</strong> at Anex Advertising (2015 – 6 months)</li>
+                <li><strong>CAE English Language Certificate</strong> (2015)</li>
+                <li><strong>Financial Literacy Training</strong> for Youth in JA Georgia (2016)</li>
+                <li><strong>Junior Dr. of Radiology</strong> at Aversi Clinic (2018 – present)</li>
+                <li><strong>IT Specialist/Interface Designer</strong> in ADAM Project (2017 – 2020)</li>
+            </ul>
+        </section>
+
+        <section id="education" class="cv-section">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>Interface Designing Courses</strong> at Geolab (2016, 6 months)</li>
+                <li><strong>Beginner Programming Courses</strong> at Geolab (2017, 3 months)</li>
+                <li><strong>MD in Clinical Radiology</strong> (2019-2022)</li>
+                <li><strong>Gita "Mobile Android Development"</strong> (2021-2022)</li>
+                <li><strong>Udemy - The Complete Web Developer Zero to Mastery</strong> (2022 – present)</li>
+            </ul>
+        </section>
+
+        <section id="skills" class="cv-section">
+            <h2>Skills</h2>
+            <p><strong>Programming Languages:</strong> CSS, HTML (Intermediate), JavaScript, Python, Java (Beginner)</p>
+            <p><strong>Languages:</strong> English (Advanced), Georgian (Native), Russian (Fluent), Spanish (A1)</p>
+            <p><strong>Digital Skills:</strong> Microsoft Office, PowerPoint, Adobe Illustrator, Video Editing (Vegas)
+            </p>
+            <p><strong>Other Skills:</strong> Good understanding of OOP, Karel, design patterns, and algorithms. Social
+                Platforms: Instagram, Google, Facebook Ads.</p>
+            <p><strong>Personal Skills:</strong> Hardworking, Outgoing, Responsible, Organized, Sociable, Creative,
+                Active, Team-player.</p>
+            <p><strong>Driving License:</strong> B1</p>
+        </section>
+        <section id="skills" class="cv-section">
+            <h2>Skills</h2>
+
+            <!-- Linear Progress Bar for HTML -->
+            <div class="progress-bar-container">
+                <h3>HTML</h3>
+                <div class="linear-progress">
+                    <div class="progress"></div>
+                </div>
+            </div>
+
+            <!-- Circular Progress Bar for HTML -->
+            <div class="progress-bar-container">
+                <h3>HTML</h3>
+                <div class="circular-progress">
+                    <span>85%</span>
+                </div>
+            </div>
+
+            <!-- Linear Progress Bar for JavaScript -->
+            <div class="progress-bar-container">
+                <h3>JavaScript</h3>
+                <div class="linear-progress">
+                    <div class="progress" style="width: 60%;"></div> <!-- Example for 60% progress -->
+                </div>
+            </div>
+
+            <!-- Circular Progress Bar for JavaScript -->
+            <div class="progress-bar-container">
+                <h3>JavaScript</h3>
+                <div class="circular-progress" style="background: conic-gradient(#0BCEAF 0% 60%, #C7C6C6 60% 100%);">
+                    <span>60%</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Lasha Grdzelishvili. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            document.getElementById('nav-links').classList.toggle('active');
+        }
+    </script>
 
 </body>
+
 </html>
