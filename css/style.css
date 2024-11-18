@@ -2,6 +2,10 @@
 li{
   list-style: none;
 }
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
