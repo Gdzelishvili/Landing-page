@@ -135,58 +135,75 @@ ul {
 
 /* Education Section Styling */
 .edu-item {
-    background-color: #222222; /* Dark background for each education item */
-    border-radius: 16px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 10px 20px rgba(0, 0, 0, 0.2); /* 3D shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    perspective: 1000px;
-    transform-style: preserve-3d;
+  background-color: #222222; /* Dark background for each education item */
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 10px 20px rgba(0, 0, 0, 0.2); /* 3D shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  perspective: 1000px;
+  transform-style: preserve-3d;
 }
 
 .edu-item:hover {
-    transform: translateZ(10px) rotateX(-2deg); /* Hover effect for 3D depth */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7), 0 15px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  transform: translateZ(10px) rotateX(-2deg); /* Hover effect for 3D depth */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7), 0 15px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 .edu-item a {
-    display: inline-block; /* Ensures the anchor tag wraps the image correctly */
-    text-decoration: none; /* Removes underline */
+  display: inline-block; /* Ensures the anchor tag wraps the image correctly */
+  text-decoration: none; /* Removes underline */
 }
 
 .edu-item img {
-    max-width: 30px; /* Limit logo size */
-    height: auto;
-    margin-left: 10px;
-    transition: transform 0.3s ease;
-    cursor: pointer; /* Adds pointer cursor to indicate clickability */
+  max-width: 30px; /* Limit logo size */
+  height: auto;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer; /* Adds pointer cursor to indicate clickability */
 }
 
 .edu-item img:hover {
-    transform: scale(1.1); /* Scale up the logo on hover */
+  transform: scale(1.1); /* Scale up the logo on hover */
 }
 
 /* Highlight words */
 .highlight {
-    color: #0bceaf; /* Use the specific color for highlighted words */
-    font-weight: bold;
+  color: #0bceaf; /* Use the specific color for highlighted words */
+  font-weight: bold;
 }
 
-
-
-
 /* Progress Bar Styles */
+/* Slider Container */
+.slider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 550px; /* Adjust height for the section */
+}
+
+.slide {
+  display: none;
+  transition: transform 0.3s ease;
+}
+
+.slide.active {
+  display: block;
+}
+
 .progress-bar-container {
-  margin: 20px 0;
+  width: 48%;
+  margin: 10px 0;
+  display: inline-block;
 }
 
 .progress-bar-container h3 {
-  font-size: 1.2rem;
+  text-align: center;
+  font-size: 1.1rem;
   margin-bottom: 5px;
 }
 
-/* Linear Progress Bar */
 .linear-progress {
   width: 100%;
   height: 20px;
@@ -198,27 +215,46 @@ ul {
 .linear-progress .progress {
   height: 100%;
   background-color: #0bceaf;
-  width: 85%;
-  /* Example for 85% progress */
   border-radius: 10px;
 }
 
-/* Circular Progress Bar */
 .circular-progress {
   position: relative;
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: conic-gradient(#0bceaf 0% 85%, #c7c6c6 85% 100%);
+  background: conic-gradient(#0bceaf 0% 70%, #c7c6c6 70% 100%);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 0;
+  margin: 10px auto;
 }
 
 .circular-progress span {
   font-size: 1.2rem;
   color: #ffffff;
+}
+
+/* Slider Controls */
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.slider-controls button {
+  padding: 10px;
+  margin: 0 10px;
+  background-color: #0bceaf;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.slider-controls button:hover {
+  background-color: #09b599;
 }
 
 /*  section spacific styles */
@@ -411,7 +447,18 @@ ul {
     flex: 1 1 100%; /* Stacking the boxes vertically */
     margin-bottom: 2rem;
   }
+  /* skils */
+  .progress-bar-container {
+    width: 100%;
+  }
 
+  .linear-progress .progress {
+    height: 15px;
+  }
+
+  .slider {
+    height: auto;
+  }
   /* about me container */
   .about-me-container {
     padding: 0 15px; /* Adjust padding for smaller screens */
@@ -427,4 +474,3 @@ ul {
     text-align: center; /* Centers the text on small screens */
   }
 }
-/* Responsive Styles for Education Section */
