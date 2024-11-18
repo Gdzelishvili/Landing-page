@@ -401,6 +401,9 @@ ul {
 
 /* resp */
 @media (max-width: 850px) {
+  ul{
+    padding-left: 0px;
+  }
   /* nav resp */
   nav {
     display: none;
