@@ -1,61 +1,430 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #121212;
-    color: #ffffff;
-    scroll-behavior: smooth;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #ffffff;
+  scroll-behavior: smooth;
+  padding-top: 20px;
 }
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #1e1e1e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #1e1e1e;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  height: 80px;
+  box-sizing: border-box;
 }
-.logo {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 24px;
+
+.contact_links {
+  width: 24px;
+  height: 24px;
 }
+
 nav {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
+
 nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 15px;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
+
+nav a:hover {
+  transform: scale(1.1);
+  /* Scale on hover */
+  color: #f0b3b3;
+  /* Slight color change on hover */
+}
+
 .burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background: #ffffff;
+  margin: 4px 0;
+}
+
+section {
+  padding: 40px 20px;
+  /*  padding between sections */
+  min-height: 30vh;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+
+  background-color: #1e1e1e;
+}
+
+/* Section Styling */
+h2 {
+  font-size: 1.8rem;
+
+  margin-bottom: 10px;
+
+  background-image: linear-gradient(to right, #ff7f50, #ff6347);
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+
+  transition: all 0.3s ease;
+}
+
+h2:hover {
+  background-image: linear-gradient(to right, #ff6347, #ff7f50);
+  /* Reverse gradient on hover */
+}
+
+p,
+ul {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  /*  margin between paragraphs and list items */
+}
+
+.cv-section {
+  background-color: #222222;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 20px 0;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transform: translateZ(0) rotateX(0deg);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.cv-section:hover {
+  transform: translateZ(20px) rotateX(-2deg);
+  /* Hover depth and slight rotation */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7), 0 15px 30px rgba(0, 0, 0, 0.3);
+  /* Enhanced shadow on hover */
+}
+
+.cv-section h3 {
+  margin-top: 0;
+}
+
+/* Education Section Styling */
+.edu-item {
+    background-color: #222222; /* Dark background for each education item */
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 10px 20px rgba(0, 0, 0, 0.2); /* 3D shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.edu-item:hover {
+    transform: translateZ(10px) rotateX(-2deg); /* Hover effect for 3D depth */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7), 0 15px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.edu-item a {
+    display: inline-block; /* Ensures the anchor tag wraps the image correctly */
+    text-decoration: none; /* Removes underline */
+}
+
+.edu-item img {
+    max-width: 30px; /* Limit logo size */
+    height: auto;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer; /* Adds pointer cursor to indicate clickability */
+}
+
+.edu-item img:hover {
+    transform: scale(1.1); /* Scale up the logo on hover */
+}
+
+/* Highlight words */
+.highlight {
+    color: #0bceaf; /* Use the specific color for highlighted words */
+    font-weight: bold;
+}
+
+
+
+
+/* Progress Bar Styles */
+.progress-bar-container {
+  margin: 20px 0;
+}
+
+.progress-bar-container h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+/* Linear Progress Bar */
+.linear-progress {
+  width: 100%;
+  height: 20px;
+  background-color: #c7c6c6;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.linear-progress .progress {
+  height: 100%;
+  background-color: #0bceaf;
+  width: 85%;
+  /* Example for 85% progress */
+  border-radius: 10px;
+}
+
+/* Circular Progress Bar */
+.circular-progress {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(#0bceaf 0% 85%, #c7c6c6 85% 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.circular-progress span {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+/*  section spacific styles */
+.name {
+  font-size: 45px;
+  line-height: 1;
+  margin-top: 20px;
+}
+.work {
+  font-size: 25px;
+}
+
+#contact {
+  background-image: url("..//iamges/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 20px;
+  color: #ffffff;
+  border-radius: 16px;
+  position: relative;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+}
+
+#contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+#contact * {
+  position: relative;
+  z-index: 2;
+}
+.contact_info_wrapper {
+  max-width: 570px;
+}
+.my_photo {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.9),
+    /* Outer border */ 0 0 0 20px rgba(0, 0, 0, 0.4);
+  /* Inner border */
+  overflow: hidden;
+  margin: auto 85px;
+}
+/* #current {
+    text-decoration:   linear-gradient(to right, #ff7f50, #ff6347);
+} */
+
+/* Experience Section */
+.experience-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+
+.experience-box {
+  background-color: #222222; /* Background color */
+  border-radius: 16px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 10px 20px rgba(0, 0, 0, 0.2); /* 3D shadow effect */
+  padding: 20px; /* Internal padding */
+  max-width: 500px; /* Limit width */
+  flex: 1; /* Allows flexibility in layout */
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.experience-box:hover {
+  transform: translateZ(20px) rotateX(-2deg); /* Hover depth and slight rotation */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7), 0 15px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.experience-title {
+  color: #0bceaf; /* Title color */
+  margin-bottom: 10px;
+  font-size: 1.5rem; /* Adjust font size */
+}
+
+#experience h2 {
+  margin-bottom: 30px; /* Increase the space below the h2 */
+}
+
+/*  about me section */
+
+.about-me-container {
+  display: block; /* Removed flexbox to allow text wrapping */
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cartoon-image {
+  width: 100%;
+  max-width: 540px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px; /* Adds space between image and text */
+  margin-bottom: 20px;
+  float: left; /* Makes the image float to the left */
+}
+
+.about-me-text {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  text-align: justify;
+  padding-top: 10px; /* Space from the top */
+}
+.about-me-title {
+  font-size: 2rem;
+  color: #0bceaf;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* resp */
+@media (max-width: 850px) {
+  /* nav resp */
+  nav {
     display: none;
     flex-direction: column;
-    cursor: pointer;
-}
-.burger div {
-    width: 25px;
-    height: 3px;
-    background: #ffffff;
-    margin: 4px 0;
-}
-.section {
-    padding: 100px 20px;
-    min-height: 100vh;
-}
-footer {
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  /* contact section */
+  #contact {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .contact-info-wrapper {
+    flex-direction: column-reverse; /* Image on top, text below */
+    align-items: center;
+    gap: 50px;
+  }
+
+  .contact-info-text {
     text-align: center;
-    padding: 20px;
-    background-color: #1e1e1e;
+    padding-right: 0;
+  }
+  .my_photo {
+    margin: 50px;
+    width: 300px;
+    height: 300px;
+  }
+
+  /* education section */
+
+  .edu-item {
+    padding: 15px; /* Adjust padding for smaller screens */
+    margin-bottom: 15px; /* Reduce margin between items */
+  }
+
+  .edu-item img {
+    max-width: 20px; /* Further reduce logo size for smaller screens */
+  }
+
+  /* experience section */
+
+  .experience-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience-box {
+    flex: 1 1 100%; /* Stacking the boxes vertically */
+    margin-bottom: 2rem;
+  }
+
+  /* about me container */
+  .about-me-container {
+    padding: 0 15px; /* Adjust padding for smaller screens */
+  }
+
+  .cartoon-image {
+    float: none; /* Removes float for smaller screens */
+    margin: 0 auto 20px; /* Centers the image and adds margin below */
+    display: block;
+  }
+
+  .about-me-text {
+    text-align: center; /* Centers the text on small screens */
+  }
 }
-@media (max-width: 768px) {
-    nav {
-        display: none;
-        flex-direction: column;
-    }
-    nav.active {
-        display: flex;
-    }
-    .burger {
-        display: flex;
-    }
-}
+/* Responsive Styles for Education Section */
