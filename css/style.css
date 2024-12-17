@@ -107,7 +107,6 @@ ul {
   font-size: 1rem;
   line-height: 1.4;
   margin-bottom: 10px;
-  /*  margin between paragraphs and list items */
 }
 
 .cv-section {
@@ -167,7 +166,10 @@ ul {
   transition: transform 0.3s ease;
   cursor: pointer; /* Adds pointer cursor to indicate clickability */
 }
-
+.logo_edu{
+  width: 20px;
+  height: 20px;
+}
 .edu-item img:hover {
   transform: scale(1.1); /* Scale up the logo on hover */
 }
